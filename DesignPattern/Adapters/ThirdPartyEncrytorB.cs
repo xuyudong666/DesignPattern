@@ -1,6 +1,4 @@
-﻿
-
-namespace DesignPattern.Adapters;
+﻿namespace DesignPattern.Adapters;
 
 public class ThirdPartyEncrytorB
 {

@@ -1,7 +1,12 @@
 ﻿using DesignPattern;
 using DesignPattern.AbstractFactorys;
+using DesignPattern.Adapters;
+using DesignPattern.bridges;
 using DesignPattern.Builders;
 using DesignPattern.Clones;
+using DesignPattern.Composites;
+using DesignPattern.Decorators;
+using DesignPattern.Facades;
 using DesignPattern.FactoryMethods;
 
 //IImageReaderFactory imageReaderFactory = new JpgReaderFactory();
@@ -121,9 +126,19 @@ using DesignPattern.FactoryMethods;
 //interfaceController.InterfaceControl();
 
 
-VideoPlayerBuilder videoPlayerBuilder = new FullModeVideoPlayerBuilder();
-Director director = new(videoPlayerBuilder);
-director.Construct();
+//VideoPlayerBuilder videoPlayerBuilder = new FullModeVideoPlayerBuilder();
+//Director director = new(videoPlayerBuilder);
+//director.Construct();
+
+//EncryptorAdapter encryptorAdapter = new EncryptorAdapter();
+//Console.WriteLine(encryptorAdapter.Encrypt("aa"));
+
+//EncryptorBAdapter encryptorBAdapter = new EncryptorBAdapter();
+//Console.WriteLine(encryptorBAdapter.Encrypt("bb"));
+
+
+DataBackupFacade dataBackupFacade = new();
+dataBackupFacade.Backup();
 
 
 

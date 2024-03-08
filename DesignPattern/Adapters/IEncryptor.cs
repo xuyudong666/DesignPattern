@@ -2,5 +2,5 @@
 
 public interface IEncryptor
 {
-    string Encrypt();
+    string Encrypt(string text);
 }

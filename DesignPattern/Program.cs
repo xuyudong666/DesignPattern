@@ -3,11 +3,15 @@ using DesignPattern.AbstractFactorys;
 using DesignPattern.Adapters;
 using DesignPattern.bridges;
 using DesignPattern.Builders;
+using DesignPattern.ChainOfResponsibilitys;
 using DesignPattern.Clones;
+using DesignPattern.Commands;
 using DesignPattern.Composites;
 using DesignPattern.Decorators;
 using DesignPattern.Facades;
 using DesignPattern.FactoryMethods;
+using DesignPattern.Flyweights;
+using DesignPattern.Proxys;
 
 //IImageReaderFactory imageReaderFactory = new JpgReaderFactory();
 //var imageReader = imageReaderFactory.CreateImageReader();
@@ -137,8 +141,40 @@ using DesignPattern.FactoryMethods;
 //Console.WriteLine(encryptorBAdapter.Encrypt("bb"));
 
 
-DataBackupFacade dataBackupFacade = new();
-dataBackupFacade.Backup();
+//DataBackupFacade dataBackupFacade = new();
+//dataBackupFacade.Backup();
+
+
+//DocumentEditor ducumentEditor = new();
+//ducumentEditor.InsertMultimedia("a",new MultimediaContext() { X = 1,Y = 2 });
+
+
+
+//GeneralManager generalManager = new("泽纯bb", "普宁第一富婆",null);
+//Manager manager = new("李四", "摸鱼的经理", generalManager);
+//DesignPattern.ChainOfResponsibilitys.Director director = new("张三", "可恶的主任", manager);
+
+//director.LeaveApproval(29);
+
+
+//List<string> imageUrls = new List<string>
+//        {
+//            "image1.jpg", "image2.png", "image3.gif"
+//        };
+
+//var viewer = new ImageViewer();
+//viewer.LoadImage(imageUrls);
+//viewer.DisplayImage();
+
+//Console.ReadKey();
+
+BoardScreen boardScreen = new();
+ICommand command = new OpenCommand(boardScreen);
+MenuItem menuItem = new MenuItem(command);
+
+Menu menu = new Menu();
+menu.AddMenuItem(menuItem);
+menuItem.Click();
 
 
 

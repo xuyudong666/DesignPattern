@@ -14,6 +14,7 @@ using DesignPattern.Flyweights;
 using DesignPattern.Iterators;
 using DesignPattern.Observers;
 using DesignPattern.Proxys;
+using DesignPattern.Visitors;
 
 //IImageReaderFactory imageReaderFactory = new JpgReaderFactory();
 //var imageReader = imageReaderFactory.CreateImageReader();
@@ -204,3 +205,13 @@ using DesignPattern.Proxys;
 //subject.Detach(shareholders);
 //subject.Notify(10, 500);
 
+Student student = new Student("张三", 11, 0);
+Teacher teacher = new("里斯", 2, 100);
+
+IVisitor visitor = new ResearchAwardVisitor();
+
+visitor.VisitTeacher(teacher);
+visitor.VisitStudent(student);
+
+new ExcellentAwardVisitor().VisitTeacher(teacher);
+new ExcellentAwardVisitor().VisitStudent(student);

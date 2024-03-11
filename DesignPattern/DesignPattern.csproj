@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Visitors\" />
     <Folder Include="Interprets\" />
   </ItemGroup>
 

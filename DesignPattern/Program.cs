@@ -11,6 +11,8 @@ using DesignPattern.Decorators;
 using DesignPattern.Facades;
 using DesignPattern.FactoryMethods;
 using DesignPattern.Flyweights;
+using DesignPattern.Iterators;
+using DesignPattern.Observers;
 using DesignPattern.Proxys;
 
 //IImageReaderFactory imageReaderFactory = new JpgReaderFactory();
@@ -168,13 +170,37 @@ using DesignPattern.Proxys;
 
 //Console.ReadKey();
 
-BoardScreen boardScreen = new();
-ICommand command = new OpenCommand(boardScreen);
-MenuItem menuItem = new MenuItem(command);
+//BoardScreen boardScreen = new();
+//ICommand command = new OpenCommand(boardScreen);
+//MenuItem menuItem = new MenuItem(command);
 
-Menu menu = new Menu();
-menu.AddMenuItem(menuItem);
-menuItem.Click();
+//Menu menu = new Menu();
+//menu.AddMenuItem(menuItem);
+//menuItem.Click();
+
+//var data = Enumerable.Range(1, 100).ToList();
+
+//var pagedIterator = new PagedIterator<int>(data, 10);
+
+//while (pagedIterator.HasNextPage())
+//{
+//	foreach (var item in pagedIterator.NextPage())
+//	{
+//        Console.Write(item + " ");
+//    }
+//    Console.WriteLine();
+//}
 
 
+//Shareholders shareholders = new Shareholders("张三");
+//Shareholders ls = new("李四");
+
+//Subject subject = new FlushSubject();
+//subject.Attach(shareholders);
+//subject.Attach(ls);
+
+//subject.Notify(5, 250);
+
+//subject.Detach(shareholders);
+//subject.Notify(10, 500);
 
